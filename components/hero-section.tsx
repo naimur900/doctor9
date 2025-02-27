@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { motion } from "motion/react";
@@ -22,7 +21,7 @@ export function HeroSection() {
     >
       <section
         id="hero"
-        className="flex flex-col-reverse justify-center items-center md:flex-row p-4 lg:p-6 lg:p-8 gap-6 "
+        className="flex flex-col-reverse justify-center items-center md:flex-row p-4 lg:p-6 gap-6 "
       >
         {/* Left Content */}
         <div className="space-y-4 text-center md:text-left md:w-6/12 2xl:w-7/12">

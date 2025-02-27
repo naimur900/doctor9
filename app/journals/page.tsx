@@ -13,10 +13,11 @@ import { Download, FileText, X } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
-// Update the PDF path to the public directory
+// PDF File Path
 const samplePdfPath = "/pdf/blank.pdf";
 
-export const journals = [
+// Journal Data
+const journals = [
   {
     id: "item-1",
     title: "To be added later",
@@ -26,39 +27,15 @@ export const journals = [
   },
 ];
 
-// const journals = [
-//   {
-//     id: "item-1",
-//     title: "Advanced Techniques in Microsurgery",
-//     date: "2023",
-//     abstract: "This paper discusses the latest advancements in microsurgical techniques for urological procedures...",
-//     pdfUrl: samplePdfPath
-//   },
-//   {
-//     id: "item-2",
-//     title: "Innovations in Kidney Stone Treatment",
-//     date: "2023",
-//     abstract: "A comprehensive review of modern approaches to kidney stone management and treatment...",
-//     pdfUrl: samplePdfPath
-//   },
-//   {
-//     id: "item-3",
-//     title: "Endourology: Current Practices",
-//     date: "2022",
-//     abstract: "An overview of current practices and emerging trends in endourological procedures...",
-//     pdfUrl: samplePdfPath
-//   }
-// ]
-
-export default function Journals() {
+export default function Page() {
+  // ✅ Fixed page component name
   const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
   const [pdfUrl, setPdfUrl] = useState<string | null>(null);
-  const [openItem, setOpenItem] = useState<string | null>(null); // Track open accordion item
+  const [openItem, setOpenItem] = useState<string | null>(null);
 
   useEffect(() => {
     if (selectedPdf) {
-      const fullUrl = `${window.location.origin}${selectedPdf}`;
-      setPdfUrl(fullUrl);
+      setPdfUrl(`${window.location.origin}${selectedPdf}`);
     } else {
       setPdfUrl(null);
     }
@@ -92,7 +69,7 @@ export default function Journals() {
                 >
                   <AccordionTrigger className="px-6 py-4 hover:no-underline">
                     <div className="flex items-start text-left">
-                      <FileText className="w-5 h-5 mr-3 mt-1 text-[#1F509A] " />
+                      <FileText className="w-5 h-5 mr-3 mt-1 text-[#1F509A]" />
                       <div>
                         <h3 className="font-semibold text-lg text-gray-900">
                           {journal.title}
@@ -109,7 +86,7 @@ export default function Journals() {
                       <div className="pt-2 flex gap-4">
                         <button
                           onClick={() => setSelectedPdf(journal.pdfUrl)}
-                          className="inline-flex items-center text-[#1F509A]  hover:text-[#5092f5]"
+                          className="inline-flex items-center text-[#1F509A] hover:text-[#5092f5]"
                         >
                           <FileText className="w-4 h-4 mr-2" />
                           Preview PDF
@@ -117,7 +94,7 @@ export default function Journals() {
                         <a
                           href={journal.pdfUrl}
                           download
-                          className="inline-flex items-center text-[#1F509A]  hover:text-[#5092f5]"
+                          className="inline-flex items-center text-[#1F509A] hover:text-[#5092f5]"
                         >
                           <Download className="w-4 h-4 mr-2" />
                           Download PDF
@@ -129,6 +106,7 @@ export default function Journals() {
               ))}
             </Accordion>
 
+            {/* PDF Viewer Modal */}
             {pdfUrl && (
               <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
                 <div className="bg-white rounded-lg w-full max-w-4xl max-h-[90vh] overflow-auto relative">
