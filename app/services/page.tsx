@@ -50,8 +50,8 @@ export default function Services() {
         className="min-h-dvh"
       >
         <div className="" id="services">
-          <h1 className="text-3xl font-bold mb-8 text-center text-gray-700">
-            আমাদের <span className="text-blue-600">সেবাসমূহ</span>
+          <h1 className="text-3xl lg:text-5xl font-bold mb-8 text-center bangla-text text-white">
+            আমাদের <span className="text-[#cbdad5] ">সেবাসমূহ</span>
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mx-8">
             {services.map((service, index) => (

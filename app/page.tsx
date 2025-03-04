@@ -1,16 +1,14 @@
-import { HeroSection } from "@/components/hero-section";
-import { IntroSection } from "@/components/intro-section";
-import { Journals } from "@/components/journals";
-// import { NavBar } from '@/components/nav-bar'
-import PatientSuccess from "@/components/patient-success-story";
-import Services from "@/components/services";
-import { WorkHistory } from "@/components/work-history";
+import { HeroSection } from "@/components/HeroSection";
+import { IntroSection } from "@/components/IntroSection";
+import { Journals } from "@/components/Journals";
+import PatientSuccess from "@/components/PatientSuccessStory";
+import Services from "@/components/Services";
+import { WorkHistory } from "@/components/WorkHistory";
 import Wrapper from "@/components/Wrapper";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* <NavBar /> */}
       <Wrapper>
         <HeroSection />
       </Wrapper>

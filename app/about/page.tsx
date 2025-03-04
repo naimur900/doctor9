@@ -19,9 +19,10 @@ export default function IntroSection() {
       >
         <section className="">
           <div className="">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-700">
+            <h1 className="text-2xl lg:text-3xl font-bold mb-8 text-center text-white">
               Brig. Gen. Prof. Dr. Md. Saidur Rahman
-            </h2>
+            </h1>
+
             <div className="flex flex-col lg:flex-row gap-8 items-center md:items-start justify-center mx-auto">
               <div className="lg:w-1/4">
                 <Card className="overflow-hidden h">
@@ -76,13 +77,13 @@ export default function IntroSection() {
                       <div className="flex flex-wrap gap-2 ">
                         <Badge
                           variant="secondary"
-                          className="bg-[#d4ebf8] text-md"
+                          className="bg-[#cbdad5] text-md"
                         >
                           General Surgery
                         </Badge>
                         <Badge
                           variant="secondary"
-                          className="bg-[#d4ebf8] text-md"
+                          className="bg-[#cbdad5] text-md"
                         >
                           Laparoscopic Surgery
                         </Badge>

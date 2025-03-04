@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        banglaFont: "var(--em-banglaFont)",
+        bangla: "var(--font-tiro-bangla)",
+        poppins: "var(--font-poppins)",
       },
       colors: {
         primary: {
